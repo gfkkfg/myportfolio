@@ -1,0 +1,165 @@
+/* General Contact Item Styles */
+.contact-item {
+  margin-left: 30px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Section Title Styles */
+.section-title {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 2.8rem;
+  color: #63b3ed; /* Lighter blue for contrast */
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  opacity: 0;
+  transform: translateX(-100px); /* Start off-screen to the left */
+  transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition */
+}
+
+/* Section Title Hover */
+.section-title:hover {
+  color: #805ad5; /* Lighter purple on hover */
+}
+
+/* Section Title - When In View (Sliding In) */
+.section-title.in-view {
+  opacity: 1; /* Make visible */
+  transform: translateX(0); /* Slide into place */
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Email Contact Item */
+.contact-item.email i {
+  font-size: 1.5rem;
+  color: #d14836; /* Red color for Email */
+}
+
+.contact-item.email a {
+  color: #d14836; /* Red color for Email */
+}
+
+.contact-item.email:hover a {
+  color: #c33d30; /* Darker red on hover */
+}
+
+/* LinkedIn Contact Item */
+.contact-item.linkedin i {
+  font-size: 1.5rem;
+  color: #0a66c2; /* LinkedIn Blue */
+}
+
+.contact-item.linkedin a {
+  color: #0a66c2; /* LinkedIn Blue */
+}
+
+.contact-item.linkedin:hover a {
+  color: #004182; /* Darker blue on hover */
+}
+
+/* GitHub Contact Item */
+.contact-item.github i {
+  font-size: 1.5rem;
+  color: #fff; /* Dark gray color for GitHub */
+}
+
+.contact-item.github a {
+  color: #fff; /* Dark gray for GitHub */
+}
+
+.contact-item.github:hover a {
+  color: #6e5494; /* Purple color on hover */
+}
+
+/* WhatsApp Contact Item */
+.contact-item.whatsapp i {
+  font-size: 1.5rem;
+  color: #25d366; /* WhatsApp Green */
+}
+
+.contact-item.whatsapp a {
+  color: #25d366; /* WhatsApp Green */
+}
+
+.contact-item.whatsapp:hover a {
+  color: #128c7e; /* Darker green on hover */
+}
+
+/* Hover Effects for Icons */
+.contact-item i:hover {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Font Awesome Icons Hover Color */
+.contact-item i.fab:hover {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: 5px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3b82f6; /* Highlight on focus */
+  outline: none;
+}
+
+.contact-form button {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #9333ea; /* Change to purple on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+.contact-form button:active {
+  transform: translateY(0); /* Neutral position on click */
+}
+
+.contact-text {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}

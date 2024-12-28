@@ -1,0 +1,143 @@
+/* Base styles for Projects Section */
+.projects-section {
+  background-color: #1a202c; /* Dark background for section */
+  padding: 60px 20px;
+  color: #e2e8f0; /* Light text for better contrast on dark background */
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #3b82f6; /* Primary blue */
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid #9333ea; /* Underline effect */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Filter Buttons */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 5px 10px;
+  background: #9333ea;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* Grid Layout for Project Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Project Card Styles */
+.project-card {
+  background: #2d3748; /* Dark background for project cards */
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadows */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Subtle hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #3b82f6;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-title:hover {
+  color: #9333ea;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #e2e8f0; /* Lighter color for better readability on dark background */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #9333ea;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: #3b82f6; /* Hover effect for badges */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+}

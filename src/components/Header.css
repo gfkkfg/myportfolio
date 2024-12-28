@@ -1,0 +1,126 @@
+/* Base Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(120deg, #3b82f6, #9333ea);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add subtle hover effect to header */
+.header:hover {
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3),
+              0 6px 12px rgba(147, 51, 234, 0.3);
+  transform: scale(1.01);
+}
+
+/* Logo Styles */
+.logo a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Add glowing effect on hover */
+.logo a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 8px #ffeb3b, 0 0 15px #ffeb3b;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.navbar .nav-links a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 220px;
+    z-index: 1001;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
+
+/* Mobile Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animation for Hamburger Menu */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

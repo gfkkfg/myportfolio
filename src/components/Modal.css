@@ -1,0 +1,206 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Modal content */
+.modal-content {
+  background: #1a202c;
+  color: #e2e8f0;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #d32f2f;
+}
+
+/* Description and technologies */
+.modal-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.tech-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-item {
+  background: #3b82f6;
+  color: #fff;
+  font-size: 1rem;
+  padding: 4px 8px;
+  margin: 5px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.tech-item:hover {
+  background: #9333ea;
+}
+
+/* Image slider */
+.image-gallery {
+  position: relative;
+  overflow: hidden; /* Hide overflow to make sliding effect */
+  max-width: 100%;
+  height: 100%; /* Adjust the height */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slider {
+  display: flex; /* Horizontal layout */
+  transition: transform 0.5s ease; /* Smooth sliding effect */
+  flex-direction: column; /* Stack image title and image */
+  align-items: center;
+}
+
+.modal-image {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Image Title */
+.image-title {
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-bottom: 5px; /* Position it at the top of the image */
+}
+
+/* Left arrow icon for previous image (Less Than) */
+.prev-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
+}
+
+.prev-icon:hover {
+  color: #9333ea; /* Change color on hover */
+}
+
+/* Right arrow icon for next image (Greater Than) */
+.next-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
+}
+
+.next-icon:hover {
+  color: #9333ea; /* Change color on hover */
+}
+
+/* Fade in and slide-up animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .modal-description {
+    font-size: 1rem;
+  }
+
+  .modal-image {
+    max-height: 200px;
+  }
+
+  .next-icon,
+  .prev-icon {
+    font-size: 1.5rem;
+  }
+}

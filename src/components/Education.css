@@ -1,0 +1,67 @@
+.education-section {
+    background-color: #1a202c; /* Darker background for sections */
+    padding: 80px 20px;
+    color: #e2e8f0; /* Light color for text */
+    transition: background-color 0.3s ease;
+}
+
+.education-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #63b3ed; /* Lighter blue for section title */
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #805ad5; /* Lighter purple underline */
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.education-item {
+    background: #2d3748; /* Darker background for items */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-title {
+    font-size: 1.5rem;
+    color: #63b3ed; /* Lighter blue for title */
+    margin-bottom: 10px;
+}
+
+.education-institution,
+.education-degree,
+.education-details {
+    font-size: 1rem;
+    color: #e2e8f0; /* Light text for details */
+}
+
+.education-title,
+.education-institution {
+    color: #e2e8f0; /* Light color for text */
+}
+
+.education-degree {
+    color: #f7fafc; /* Slightly lighter color for degree */
+}
+
+.education-details {
+    color: #cbd5e0; /* Light grey for details */
+}

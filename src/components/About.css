@@ -1,0 +1,215 @@
+/* Base Styles for Body */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #1a202c, #2d3748); /* Dark gradient background */
+  color: #e2e8f0; /* Light color for text */
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+/* Smooth Scroll Effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Transitions */
+section {
+  transition: padding 0.5s ease-in-out, transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section Styles */
+.about-section {
+  background-color: #2d3748; /* Darker background for sections */
+  padding: 80px 20px;
+  color: #e2e8f0; /* Light color for text */
+  transition: background-color 0.3s ease;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Title Styles */
+.section-title {
+  font-size: 2.8rem;
+  color: #63b3ed; /* Lighter blue for contrast */
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  opacity: 0;
+  transform: translateX(-100px); /* Start off-screen to the left */
+  transition: transform 0.9s ease, opacity 0.9s ease; /* Smooth transition */
+}
+
+/* Section Title Hover */
+.section-title:hover {
+  color: #805ad5; /* Lighter purple on hover */
+}
+
+/* Section Title - When In View (Sliding In) */
+.section-title.in-view {
+  opacity: 1; /* Make visible */
+  transform: translateX(0); /* Slide into place */
+}
+
+/* Keyframe for sliding in effect */
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100px); /* Start from the left */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Slide to the default position */
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to titles on page load */
+.section-title {
+  animation: slide-in 0.6s ease forwards;
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  transition: transform 0.3s ease;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effect on Image */
+.about-image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 10px rgba(147, 51, 234, 0.6), /* Purple */
+              0 0 50px 15px rgba(59, 130, 246, 0.6), /* Blue */
+              0 0 70px 20px rgba(16, 185, 129, 0.6); /* Green */
+  z-index: 2;
+}
+
+.about-text-container {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.about-text {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #e2e8f0; /* Lighter color for text */
+}
+
+.about-text strong {
+  color: #63b3ed; /* Emphasize your name with lighter blue */
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #63b3ed; /* Lighter blue for button */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Button */
+.about-button:hover {
+  background: #805ad5; /* Lighter purple on hover */
+  transform: translateY(-2px);
+}
+
+/* Global Hover Effects */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #805ad5;
+  text-shadow: 0 0 5px #805ad5, 0 0 10px #805ad5;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1a202c; /* Dark background for footer */
+  color: #e2e8f0; /* Light text for footer */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #805ad5; /* Lighter purple on footer hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-text-container {
+    text-align: center;
+  }
+
+  .about-button {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+}

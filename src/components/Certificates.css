@@ -1,0 +1,93 @@
+.certificates-section {
+  background-color: #1a202c; /* Dark background */
+  padding: 60px 20px;
+  color: #fff; /* Text color changed to white for better contrast */
+}
+
+.certificates-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #9333ea;
+  animation: fadeIn 1s ease-in-out; /* Added animation for section title */
+}
+
+.certificates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  background: #2d3748; /* Dark card background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  animation: slideUp 0.5s ease-out; /* Added animation for each card */
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background: #3b82f6; /* Change background on hover */
+}
+
+.certificate-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.certificate-details {
+  font-size: 1rem;
+  color: #e2e8f0; /* Light gray text for better readability */
+  margin-bottom: 10px;
+}
+
+.certificate-link {
+  display: inline-block;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.certificate-link:hover {
+  background: #9333ea;
+}
+
+/* Fade-in effect for section title */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-up effect for certificates */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
