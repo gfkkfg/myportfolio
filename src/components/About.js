@@ -40,7 +40,7 @@ function About() {
             I enjoy building creative projects, learning new technologies, and applying my skills
             to solve real-world problems. With a strong focus on quality and innovation, I aim to contribute meaningfully to every project I undertake.
           </p>
-          <a href="/path/to/resume.pdf" className="about-button" download>Download Resume</a>
+          <a href="/certificates/resume.pdf" className="about-button" download>Download Resume</a>
         </div>
       </div>
     </section>
