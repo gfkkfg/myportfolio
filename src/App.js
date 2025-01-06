@@ -18,7 +18,7 @@ function App() {
         <Education />
         <Skills />
         <Projects />
-        <Certificates /> {/* Add the Certificates section here */}
+        <Certificates /> 
         <Contact />
       </main>
       <footer>

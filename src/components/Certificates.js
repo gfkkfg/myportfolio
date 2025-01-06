@@ -13,7 +13,7 @@ function Certificates() {
       title: 'Data Structures and Algorithms in Java',
       institution: 'SWAYAM NPTEL',
       score: '66%',
-      link: '/certificates/data-structures-java.pdf', 
+      link: '/certificates/Data_Structure_and_Algorithms_using_Java.pdf', 
     },
     {
       title: 'Data Science Webinar',
